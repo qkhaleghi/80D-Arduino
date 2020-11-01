@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)http://tech.mattmillman.com/projects/8od/ -->
+<html lang="en-US"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width">
+	<title>8OD – Arduino form factor Intel 8086 | Matt's Tech Pages</title>
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="http://tech.mattmillman.com/xmlrpc.php">
+	<!--[if lt IE 9]>
+	<script src="http://tech.mattmillman.com/wp-content/themes/twentyfourteen/js/html5.js?ver=3.7.0"></script>
+	<![endif]-->
+	<link rel="dns-prefetch" href="http://fonts.googleapis.com/">
+<link rel="dns-prefetch" href="http://s.w.org/">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="Matt&#39;s Tech Pages » Feed" href="http://tech.mattmillman.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Matt&#39;s Tech Pages » Comments Feed" href="http://tech.mattmillman.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Matt&#39;s Tech Pages » 8OD – Arduino form factor Intel 8086 Comments Feed" href="http://tech.mattmillman.com/projects/8od/feed/">
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script async="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/analytics.js.download"></script><script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-59823213-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-59823213-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/tech.mattmillman.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.4"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/wp-emoji-release.min.js.download" type="text/javascript" defer=""></script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/style.min.css" media="all">
+<link rel="stylesheet" id="wp-block-library-theme-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/theme.min.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-lato-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/css" media="all">
+<link rel="stylesheet" id="genericons-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/genericons.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-style-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/style.css" media="all">
+<link rel="stylesheet" id="twentyfourteen-block-style-css" href="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/blocks.css" media="all">
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentyfourteen-ie-css'  href='http://tech.mattmillman.com/wp-content/themes/twentyfourteen/css/ie.css?ver=20140701' media='all' />
+<![endif]-->
+<script>
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"http:\/\/tech.mattmillman.com","hash_tracking":"false"};
+</script>
+<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/frontend.min.js.download"></script>
+<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/jquery.js.download"></script>
+<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/jquery-migrate.min.js.download"></script>
+<link rel="https://api.w.org/" href="http://tech.mattmillman.com/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://tech.mattmillman.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://tech.mattmillman.com/wp-includes/wlwmanifest.xml"> 
+<meta name="generator" content="WordPress 5.4.4">
+<link rel="canonical" href="http://tech.mattmillman.com/projects/8od/">
+<link rel="shortlink" href="http://tech.mattmillman.com/?p=372">
+<link rel="alternate" type="application/json+oembed" href="http://tech.mattmillman.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftech.mattmillman.com%2Fprojects%2F8od%2F">
+<link rel="alternate" type="text/xml+oembed" href="http://tech.mattmillman.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Ftech.mattmillman.com%2Fprojects%2F8od%2F&amp;format=xml">
+<style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style></head>
+
+<body class="page-template-default page page-id-372 page-parent page-child parent-pageid-77 wp-embed-responsive masthead-fixed full-width singular">
+<div id="page" class="hfeed site">
+	
+	<header id="masthead" class="site-header" role="banner">
+		<div class="header-main">
+			<h1 class="site-title"><a href="http://tech.mattmillman.com/" rel="home">Matt's Tech Pages</a></h1>
+
+			<div class="search-toggle">
+				<a href="http://tech.mattmillman.com/projects/8od/#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container">Search</a>
+			</div>
+
+			<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
+				<button class="menu-toggle">Primary Menu</button>
+				<a class="screen-reader-text skip-link" href="http://tech.mattmillman.com/projects/8od/#content">Skip to content</a>
+				<div id="primary-menu" class="nav-menu"><ul>
+<li class="page_item page-item-1265 page_item_has_children"><a href="http://tech.mattmillman.com/info/">Info</a>
+<ul class="children">
+	<li class="page_item page-item-2182"><a href="http://tech.mattmillman.com/info/a-crash-course-in-using-gpo-telephones-in-the-modern-world/">A crash course in using GPO telephones in the modern world</a></li>
+	<li class="page_item page-item-1152"><a href="http://tech.mattmillman.com/info/crimpconnectors/">Common wire-to-board, wire-to-wire connectors, and crimp tools</a></li>
+	<li class="page_item page-item-1656"><a href="http://tech.mattmillman.com/info/converting-an-ibm-5150-model-a-black-115v-power-supply-to-230v/">Converting an IBM PC 5150 “Model A” black 115V power supply to 230V</a></li>
+	<li class="page_item page-item-3720"><a href="http://tech.mattmillman.com/info/kaypro-pc-exp-info/">Kaypro PC/EXP Info</a></li>
+	<li class="page_item page-item-3828 page_item_has_children"><a href="http://tech.mattmillman.com/info/qic-tape-drive-info/">QIC Tape Drive Info</a>
+	<ul class="children">
+		<li class="page_item page-item-3958"><a href="http://tech.mattmillman.com/info/qic-tape-drive-info/qic-tape-drive-models/">QIC Tape drive models</a></li>
+		<li class="page_item page-item-3741"><a href="http://tech.mattmillman.com/info/qic-tape-drive-info/re-building-capstans-for-qic-tape-drives/">Re-building capstans for QIC tape drives</a></li>
+		<li class="page_item page-item-3470"><a href="http://tech.mattmillman.com/info/qic-tape-drive-info/reviving-a-qic-tape-backup-solution-from-30-years-ago/">Reviving a QIC tape backup solution from 30 years ago</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-3191"><a href="http://tech.mattmillman.com/info/specialty-electrical-tapes/">Specialty Electrical Tapes</a></li>
+	<li class="page_item page-item-181 page_item_has_children"><a href="http://tech.mattmillman.com/info/lcd/">LCD Controllers</a>
+	<ul class="children">
+		<li class="page_item page-item-100 page_item_has_children"><a href="http://tech.mattmillman.com/info/lcd/rovatools/">ROVA Tools – Programmer for Realtek RTD2660 / RTD2662  / RTD2120 LCD controllers</a>
+		<ul class="children">
+			<li class="page_item page-item-1374"><a href="http://tech.mattmillman.com/info/lcd/rovatools/usb-blaster-clone/">Converting a USB Blaster II Clone into a ROVA USB-TOOLS programmer</a></li>
+			<li class="page_item page-item-1943"><a href="http://tech.mattmillman.com/info/lcd/rovatools/rovaedit-readme/">ROVAEdit Readme</a></li>
+			<li class="page_item page-item-1393"><a href="http://tech.mattmillman.com/info/lcd/rovatools/ftdi-ft232h/">Using ROVATool with an FTDI FT232H Based board</a></li>
+		</ul>
+</li>
+		<li class="page_item page-item-2588"><a href="http://tech.mattmillman.com/info/lcd/rovaedit-firmware-editor-for-r-rm-series-lcd-controllers/">ROVAEdit – Firmware editor for R.RM series LCD controllers</a></li>
+		<li class="page_item page-item-197"><a href="http://tech.mattmillman.com/info/lcd/rm5251/">R.RM3251, R.RM3451, R.RM5251 and R.RM5451 LCD Controllers Review</a></li>
+		<li class="page_item page-item-129"><a href="http://tech.mattmillman.com/info/lcd/pcb800099/">PCB800099 – RTD2660/RTD2662 based LCD Controller Review</a></li>
+		<li class="page_item page-item-237"><a href="http://tech.mattmillman.com/info/lcd/nta92c/">B.NTA92C – NT68667 Based LCD Controller Review</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="page_item page-item-77 page_item_has_children current_page_ancestor current_page_parent"><a href="http://tech.mattmillman.com/projects/">Projects</a>
+<ul class="children">
+	<li class="page_item page-item-372 page_item_has_children current_page_item"><a href="http://tech.mattmillman.com/projects/8od/" aria-current="page">8OD – Arduino form factor Intel 8086</a>
+	<ul class="children">
+		<li class="page_item page-item-488"><a href="http://tech.mattmillman.com/projects/8od/hardware/">8OD – Hardware</a></li>
+		<li class="page_item page-item-460"><a href="http://tech.mattmillman.com/projects/8od/software/">8OD – Software</a></li>
+		<li class="page_item page-item-521"><a href="http://tech.mattmillman.com/projects/8od/cpu/">8OD – Processor selection</a></li>
+		<li class="page_item page-item-451"><a href="http://tech.mattmillman.com/projects/8od/k1810bm86/">8OD – Running with USSR K1810BM86</a></li>
+		<li class="page_item page-item-1015"><a href="http://tech.mattmillman.com/projects/8od/ethernet-shield/">8OD – Ethernet shield</a></li>
+		<li class="page_item page-item-833"><a href="http://tech.mattmillman.com/projects/8od/getting-started/">8OD – Getting started</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-4053"><a href="http://tech.mattmillman.com/projects/an-intel-mcs-48-based-dual-temperature-sensor/">An Intel MCS-48 based dual temperature sensor</a></li>
+	<li class="page_item page-item-6"><a href="http://tech.mattmillman.com/projects/10base5/">Building a 10BASE5 “Thick Ethernet” network</a></li>
+	<li class="page_item page-item-2977"><a href="http://tech.mattmillman.com/projects/building-an-extremely-high-powered-1-12v-lab-power-supply-on-the-cheap/">Building an extremely high powered 1-12V lab power supply on the cheap</a></li>
+	<li class="page_item page-item-2232"><a href="http://tech.mattmillman.com/projects/building-your-own-pulse-to-tone-converter/">Building your own pulse to tone (DTMF) converter</a></li>
+	<li class="page_item page-item-3792 page_item_has_children"><a href="http://tech.mattmillman.com/projects/hveprom-project/">HVEPROM Project</a>
+	<ul class="children">
+		<li class="page_item page-item-2611"><a href="http://tech.mattmillman.com/projects/hveprom-project/a-compact-programmer-for-1702a-eproms/">A compact programmer for 1702A EPROMs</a></li>
+		<li class="page_item page-item-4116"><a href="http://tech.mattmillman.com/projects/hveprom-project/an-easy-to-build-mcs-48-8748-8749-8741-8742-8048-8049-programmer-reader/">An easy to build MCS-48 (8748 / 8749 / 8741 / 8742 / 8048 / 8049) Programmer / Reader</a></li>
+		<li class="page_item page-item-2342"><a href="http://tech.mattmillman.com/projects/hveprom-project/an-easy-to-build-programmer-for-2704-2708-mcm68764-mcm68766-eproms/">An easy to build programmer for 2704 / 2708 / MCM68764 / MCM68766 EPROMs</a></li>
+	</ul>
+</li>
+	<li class="page_item page-item-67"><a href="http://tech.mattmillman.com/projects/usbaui/">USB Ethernet Adapter with AUI interface</a></li>
+	<li class="page_item page-item-1092"><a href="http://tech.mattmillman.com/projects/building-a-fridge-compressor-air-compressor/">Building a Fridge compressor Air compressor</a></li>
+</ul>
+</li>
+<li class="page_item page-item-290 page_item_has_children"><a href="http://tech.mattmillman.com/tools/">Tools</a>
+<ul class="children">
+	<li class="page_item page-item-286"><a href="http://tech.mattmillman.com/tools/tdsscreencap/">TDSScreenCap – An RS232 screen capture program for the Tektronix TDS3000 series</a></li>
+	<li class="page_item page-item-3229"><a href="http://tech.mattmillman.com/tools/windows-command-line-management-tool-for-ltfs/">Windows command line management tool for HP LTFS</a></li>
+</ul>
+</li>
+<li class="page_item page-item-261"><a href="http://tech.mattmillman.com/about/">About</a></li>
+</ul></div>
+			</nav>
+		</div>
+
+		<div id="search-container" class="search-box-wrapper hide">
+			<div class="search-box">
+				<form role="search" method="get" class="search-form" action="http://tech.mattmillman.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search …" value="" name="s">
+				</label>
+				<input type="submit" class="search-submit" value="Search">
+			</form>			</div>
+		</div>
+	</header><!-- #masthead -->
+
+	<div id="main" class="site-main">
+
+<div id="main-content" class="main-content">
+
+	<div id="primary" class="content-area">
+		<div id="content" class="site-content" role="main">
+
+			
+<article id="post-372" class="post-372 page type-page status-publish hentry">
+	<header class="entry-header"><h1 class="entry-title">8OD – Arduino form factor Intel 8086</h1></header><!-- .entry-header -->
+	<div class="entry-content">
+		<p>Blessed with a bit of spare time recently, I completed my most zany ever contraption: A <a href="http://en.wikipedia.org/wiki/List_of_Arduino_boards_and_compatible_systems#Non-Arduino_boards">Non-Arduino</a> powered by the giant of computing history – Intel’s 8086 processor.</p>
+<p><a href="http://techmattmillman.s3.amazonaws.com/wp-content/uploads/2015/01/main11.jpg"><img class="aligncenter wp-image-931 size-large" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/main11-1024x748.jpg" alt="8OD.1 8086 Arduino form factor single board computer" width="474" height="346"></a></p>
+<h1>Why?</h1>
+<p>Back in the day, if you wanted to play with this stuff, you were likely reaching for a beast resembling&nbsp;the&nbsp;<a href="http://en.wikipedia.org/wiki/Intel_System_Development_Kit#Intel_SDK-86">SDK-86</a>. Code ran from EPROMs, was debugged by logic analyser and closest thing to stackexchange was a stack of technical manuals. These days, stuff like this is becoming increasingly rare, but to many, still interesting.</p>
+<p>I’ve always thought it’d be cool to build a single board computer&nbsp;in the old style, specifically, one with a traditional local bus.</p>
+<p>It’s a shame (but understandable) that these days, it’s tough to find a small microcontroller&nbsp;with an honest local bus. Many have one, but almost none actually need it. Just prior to this project, I built a board&nbsp;based on an 8031. It was cool, but not cool enough. The 8031 still is a very integrated device and doesn’t really need its bus for anything other than the ROM.</p>
+<p>Hungry for more (and out of work at the time) – at the start of July 2014, I kicked off a second project: 8OD. Based on the Intel 8086. It quickly became apparent that this project was going to be on another scale. The resulting board is definitely guilty of looking very complicated, but really, it’s pretty basic. It’s just got most of the stuff which is&nbsp;normally jammed inside an SoC as real circuitry.</p>
+<h1>Additional information</h1>
+<ul>
+<li><a href="http://tech.mattmillman.com/8od/hardware/">Hardware information</a></li>
+<li><a href="http://tech.mattmillman.com/8od/software">Software information</a></li>
+<li><a href="http://tech.mattmillman.com/8od/cpu/">Processor selection</a></li>
+<li><a href="http://tech.mattmillman.com/8od/k1810bm86/">Running 8OD with USSR K1810BM86</a></li>
+<li><a href="http://tech.mattmillman.com/8od/ethernet-shield/%20">Use with the Arduino Ethernet shield</a></li>
+<li><a href="http://tech.mattmillman.com/8od/getting-started/">Getting started</a></li>
+</ul>
+<h1>Am I selling these?</h1>
+<p>In response to considerable interest when I first published this project, I did consider it, but in the end&nbsp;decided not to offer them for sale. There’s just too many end of life / difficult to find parts on this board to manufacture it in&nbsp;saleable quantities. Even if I could reliably obtain the parts, it’d cost more than anyone would be willing to pay 😉</p>
+<p>For anyone who’s really interested. Get in touch. In some cases I may consider making boards available depending on circumstances.</p>
+<h1>Building one</h1>
+<p>As it is not practical to mass produce these – I am willing to assist / provide all of the information needed to anyone interested in making one, provided that you understand that you are going to have to source some recycled components – namely: the XC95216 CPLD, and the TP3465V SPI master. Once again get in touch if interested.</p>
+	</div><!-- .entry-content -->
+</article><!-- #post-372 -->
+
+<div id="comments" class="comments-area">
+
+	
+	<h2 class="comments-title">
+		20 thoughts on “8OD – Arduino form factor Intel 8086”	</h2>
+
+		
+	<ol class="comment-list">
+				<li id="comment-18676" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://tech.mattmillman.com/8-months-later-8od-prototypes-finally-completed/" rel="external nofollow ugc" class="url">8 months later, 8OD prototypes finally completed | Matt's Tech Projects</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18704" class="comment odd alt thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-18704" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/7c900ef1f3db8588ed1197ea6c2e004b.jpeg" srcset="http://1.gravatar.com/avatar/7c900ef1f3db8588ed1197ea6c2e004b?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">Boyd Waters</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18704">
+							<time datetime="2015-02-16T20:16:04+00:00">
+								February 16, 2015 at 8:16 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Brilliant!</p>
+<p>You might like Steve Ciarcia’s home brew 8086 PC, which he published in BYTE magazine: write-up, schematics.</p>
+<p><a href="https://archive.org/stream/byte-magazine-1982-11/1982_11_BYTE_07-11_Graphics" rel="nofollow ugc">https://archive.org/stream/byte-magazine-1982-11/1982_11_BYTE_07-11_Graphics</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18704#respond" data-commentid="18704" data-postid="372" data-belowelement="div-comment-18704" data-respondelement="respond" aria-label="Reply to Boyd Waters">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-18711" class="comment even depth-2">
+			<article id="div-comment-18711" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/b63f54da6733905433afde0b9762e082.png" srcset="http://2.gravatar.com/avatar/b63f54da6733905433afde0b9762e082?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">david b</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18711">
+							<time datetime="2015-02-16T22:07:50+00:00">
+								February 16, 2015 at 10:07 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p><a href="https://archive.org/stream/byte-magazine-1982-11/1982_11_BYTE_07-11_Graphics#page/n79/mode/2up" rel="nofollow ugc">https://archive.org/stream/byte-magazine-1982-11/1982_11_BYTE_07-11_Graphics#page/n79/mode/2up</a></p>
+<p>This link gets you to the page… It is actually a good read.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18711#respond" data-commentid="18711" data-postid="372" data-belowelement="div-comment-18711" data-respondelement="respond" aria-label="Reply to david b">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-18716" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://hackaday.com/2015/02/17/non-arduino-powered-by-a-piece-of-computing-history/" rel="external nofollow ugc" class="url">Non-Arduino powered by a piece of Computing history | Hackaday</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18720" class="pingback even thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://tech.mattmillman.com/first-8od-feedback/" rel="external nofollow ugc" class="url">First, err, negative 8OD Feedback | Matt's Tech Projects</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18721" class="comment odd alt thread-even depth-1 parent">
+			<article id="div-comment-18721" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/52933e79cd1cd8c8356053286f5daf47.png" srcset="http://2.gravatar.com/avatar/52933e79cd1cd8c8356053286f5daf47?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn"><a href="http://www.olduino.wordpress.com/" rel="external nofollow ugc" class="url">bill rowe</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18721">
+							<time datetime="2015-02-17T13:06:14+00:00">
+								February 17, 2015 at 1:06 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is excellent.  much more sophisticated hardware support than my olduino which is based on the RCA 1802.  Mine has high speed spi but otherwise limited I/o.  I’ve had a lot of fun with it though and you may find some of the projects interesting e.g. Ethernet: <a href="https://olduino.wordpress.com/vcfmw/ethernet/" rel="nofollow ugc">https://olduino.wordpress.com/vcfmw/ethernet/</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18721#respond" data-commentid="18721" data-postid="372" data-belowelement="div-comment-18721" data-respondelement="respond" aria-label="Reply to bill rowe">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-18723" class="comment byuser comment-author-admin bypostauthor even depth-2 parent">
+			<article id="div-comment-18723" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/a25bbf9ebcf614904c338357e96e2cab.png" srcset="http://1.gravatar.com/avatar/a25bbf9ebcf614904c338357e96e2cab?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18723">
+							<time datetime="2015-02-17T13:47:40+00:00">
+								February 17, 2015 at 1:47 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>This is brilliant. I like how you have a feature I originally had but ditched, which is two stacked PCBs.</p>
+<p>My first cut of the design had the 8086 and co on a PCB underneath the rest of it too, but I ditched this idea because I was worried about reliability of the connections between the two.</p>
+<p>The Ethernet is interesting! I was supposed to do this for mine but have just been too inundated with everything else that’s been needed to get it out the door!</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18723#respond" data-commentid="18723" data-postid="372" data-belowelement="div-comment-18723" data-respondelement="respond" aria-label="Reply to admin">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-18726" class="comment odd alt depth-3">
+			<article id="div-comment-18726" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/52933e79cd1cd8c8356053286f5daf47.png" srcset="http://2.gravatar.com/avatar/52933e79cd1cd8c8356053286f5daf47?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn"><a href="http://www.olduino.wordpress.com/" rel="external nofollow ugc" class="url">bill rowe</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18726">
+							<time datetime="2015-02-17T17:00:17+00:00">
+								February 17, 2015 at 5:00 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Ethernet is probably the showiest thing but you can have good fun with a lot of modern peripherals meant for arduinos.  If you look on the about page you can see a rangefinder using a little lcd and an ultrasonic module for example. <a href="https://olduino.wordpress.com/about/" rel="nofollow ugc">https://olduino.wordpress.com/about/</a></p>
+<p>My two level design was because someone else came up with the basic 1802 board and I piggybacked on it.  The assembly is small enough that it will fit in most places that an arduino will go like a robot car:  <a href="https://olduino.wordpress.com/2015/01/24/carbot-is-successful-ish/" rel="nofollow ugc">https://olduino.wordpress.com/2015/01/24/carbot-is-successful-ish/</a></p>
+<p>Anyway, thanks for the compliment and i’ll keep coming back to check your progress.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18726#respond" data-commentid="18726" data-postid="372" data-belowelement="div-comment-18726" data-respondelement="respond" aria-label="Reply to bill rowe">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-18845" class="pingback even thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://olduino.wordpress.com/2015/03/09/tcphttp-hll-but-some-light/" rel="external nofollow ugc" class="url">TCP/HTTP h*ll – but some light | olduino</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18868" class="pingback odd alt thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://olduino.wordpress.com/2015/03/12/in-which-bagels-arises-from-tcp-hll/" rel="external nofollow ugc" class="url">In Which Bagels Arises From TCP H*ll | olduino</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-18959" class="comment even thread-odd thread-alt depth-1 parent">
+			<article id="div-comment-18959" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/47e72e514660bfb2830bbe49a6ee586f.png" srcset="http://1.gravatar.com/avatar/47e72e514660bfb2830bbe49a6ee586f?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn"><a href="http://---/" rel="external nofollow ugc" class="url">Rob</a></b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18959">
+							<time datetime="2015-03-28T13:29:09+00:00">
+								March 28, 2015 at 1:29 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Well, its more than ironic that your obsolescent=antique-8086 project ist built around a now also already obsolescent Xilinx CPLD!</p>
+<p>It shows that obsolescence is growing rapidly in electronics field!</p>
+<p>If somebody wants to “homebrew” a todays “core-iXY” based PC in maybe 5 or 10 years, this will be almost impossible!</p>
+<p>Some hints from my 25 years experience:</p>
+<p>– the µP you are using is a  C8086 from intel, so it is already a very late C-Mos-Implentation, that should be able to run also at 3.3V, making it compatible with almost any modern CPLD/FPGA-device.</p>
+<p>– if not: there are many level-shifter ICs on the market solving that issue for the rather slow 8MHz (or less) 8086, using an 8088 would also solve some of the I/O problems due to its more handsome 8-Bit external Bus… (also the original IBM-PC ran with an 8088, not 8086 the first ISA-Slot was 8Bit wide, the 16bit extension only came with the AT 80286 machines!)</p>
+<p>All the original chipset ICs from Intel are available on the net as “free cores” for FPGA implementation, also the 8088 itself, so you can build up a FPGA-only Arduino-Board and virtually implement ANY CPU (with an free ipcore available), so whats the difference???</p>
+<p>I knew some guys that built their own PC-Clones in the early 80ties, some neighbours dad ( i was born in 69) worked at IBM germany that time and had some experimental PC running spread all over his home-lab, maybe he (and some others) infected me with the PC-Virus ;o)</p>
+<p>I myself built first some Sinclair ZX81-kits for my friends and then decided to build my own ZX clone,  trying to reengineer those parts inside the PLA/ULA (some kind of GAL/PAL) sinclair specific chip without knowing that time, that there was a precedessor named ZX80, which was build with pure TTL around the Z80-µP!</p>
+<p>But then i got the chance to buy a VIC20 from commodore very cheap, so i changed to 6502, the first risc-µP in the world and best µP forever ;o)</p>
+<p>So if i would have some spare time i rather would build a 6502 (or better : 65816  or insiders ;o)) board with arduino compatible I/O blaming ATMELs 8051s forever ;o)</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18959#respond" data-commentid="18959" data-postid="372" data-belowelement="div-comment-18959" data-respondelement="respond" aria-label="Reply to Rob">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-18964" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-18964" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/a25bbf9ebcf614904c338357e96e2cab.png" srcset="http://1.gravatar.com/avatar/a25bbf9ebcf614904c338357e96e2cab?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18964">
+							<time datetime="2015-03-28T18:09:14+00:00">
+								March 28, 2015 at 6:09 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Just few comments on that comment:</p>
+<p><em>the µP you are using is a C8086 from intel, so it is already a very late C-Mos-Implentation, that should be able to run also at 3.3V</em></p>
+<p>Are you sure you don’t mean 80C86? The ‘C’ in the C8086 I picture 8OD with denotes ceramic DIP package. It’s an NMOS part. I was mostly only interested in running the original NMOS parts. I have tried a CMOS 8086 (CP80C86) but I checked the datasheet, its VCC is min 4.5V. Granted it ‘should’ work, but I wasn’t out to build something that just ‘should’ work.</p>
+<p><em>due to its more handsome 8-Bit external Bus</em></p>
+<p>I never found the 8088’s bus interface very handsome. It makes it rather a lousy CPU as the EU spends about 30% of its time twiddling its thumbs waiting for the BIU.</p>
+<p>Also I thought I’d enjoy the challenge of making it a 16-bit design more. There’s very few other examples of people attempting something like this so am definitely glad I did.</p>
+<p><em>if not: there are many level-shifter ICs on the market solving that issue</em></p>
+<p>It depends what you mean by solving. Sure, buffering the CPU side would be easy, but 8OD’s interface to the outside world is through the CPLD, so that’d make it somewhat of an ugly duckling in the predominately 5 volt Arduino world, especially with many shields assuming 5 volt operation.</p>
+<p>Perhaps buffer the general purpose pins too? Crikey. That’d be complex. I’ve never seen a level shifter with individually reverseable channels, other than auto direction shifters, which are no good for things like driving LEDs. Even if such a thing existed, I’d quickly find myself with a world of new problems, including being plagued with glitch problems on I/O direction changes.</p>
+<p>Not to mention the difficulty accommodating all of this on the PCB without making it significantly larger or adding more layers.</p>
+<p><em>so you can build up a FPGA-only Arduino-Board and virtually implement ANY CPU</em></p>
+<p>I could save myself even more time and just play with emu8086.</p>
+<p><em>So if i would have some spare time i rather would build a 6502 (or better : 65816 or insiders ;o)) board with arduino compatible I/O</em></p>
+<p>I look forward to seeing it.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18964#respond" data-commentid="18964" data-postid="372" data-belowelement="div-comment-18964" data-respondelement="respond" aria-label="Reply to admin">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-18962" class="comment even thread-even depth-1">
+			<article id="div-comment-18962" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/f08f7268ad1fd7cf4f96db867b946dac.png" srcset="http://0.gravatar.com/avatar/f08f7268ad1fd7cf4f96db867b946dac?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">Rudolf Alexander Thiessen</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18962">
+							<time datetime="2015-03-28T17:41:04+00:00">
+								March 28, 2015 at 5:41 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>Very interesting proyect! I am from the 8086 era too…<br>
+As I saw your proyect, I was thinking, what do you think about a 80386 board? I still have some 80386 boards lying here and I see that they don´t have that much peripherals chips on there, and it would be easy to migrate the software. I designet ISA IO cards these times.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18962#respond" data-commentid="18962" data-postid="372" data-belowelement="div-comment-18962" data-respondelement="respond" aria-label="Reply to Rudolf Alexander Thiessen">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-18963" class="comment odd alt thread-odd thread-alt depth-1">
+			<article id="div-comment-18963" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/f08f7268ad1fd7cf4f96db867b946dac.png" srcset="http://0.gravatar.com/avatar/f08f7268ad1fd7cf4f96db867b946dac?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">Rudolf Alexander Thiessen</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-18963">
+							<time datetime="2015-03-28T18:00:59+00:00">
+								March 28, 2015 at 6:00 pm							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>I was designing Z80 boards and had one design almost ready as the new things came. This design comprised a small “motherboard” with the ROM and even a battery backup RAM, Watchdog,  and this board needs a second board for the IO, which I not terminate to design.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=18963#respond" data-commentid="18963" data-postid="372" data-belowelement="div-comment-18963" data-respondelement="respond" aria-label="Reply to Rudolf Alexander Thiessen">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+		<li id="comment-20125" class="pingback even thread-even depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://olduino.wordpress.com/2015/09/17/oluinoz-more-practical-first-step/" rel="external nofollow ugc" class="url">Oluino/Z More Practical First Step | olduino</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-21173" class="pingback odd alt thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="https://olduino.wordpress.com/2015/11/27/adding-the-tp3465v-spi-chip/" rel="external nofollow ugc" class="url">Adding the TP3465V SPI Chip | olduino</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-27961" class="comment even thread-even depth-1 parent">
+			<article id="div-comment-27961" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/37a435d05203a19af8d77e148f67edc4.png" srcset="http://0.gravatar.com/avatar/37a435d05203a19af8d77e148f67edc4?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">jimmy pi</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-27961">
+							<time datetime="2017-03-31T06:42:26+00:00">
+								March 31, 2017 at 6:42 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>dear matt, i would be very interested in purchasing at least a couple of boards for your 8OD – Arduino form factor Intel 8086 if you do decide to make any! thank you for your time, jimmy pi.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=27961#respond" data-commentid="27961" data-postid="372" data-belowelement="div-comment-27961" data-respondelement="respond" aria-label="Reply to jimmy pi">Reply</a></div>			</article><!-- .comment-body -->
+		<ol class="children">
+		<li id="comment-28026" class="comment byuser comment-author-admin bypostauthor odd alt depth-2">
+			<article id="div-comment-28026" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/a25bbf9ebcf614904c338357e96e2cab.png" srcset="http://1.gravatar.com/avatar/a25bbf9ebcf614904c338357e96e2cab?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">admin</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-28026">
+							<time datetime="2017-04-03T10:34:34+00:00">
+								April 3, 2017 at 10:34 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>As I previously mentioned, I cannot produce these due two parts (XC95216 and TP3465) being discontinued. There are no direct replacements for these either.</p>
+<p>Most outfits who offer PCBA are unwilling to assemble with recycled components, however I would most certainly willing to provide all of the information needed to hand assemble with second hand parts.</p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=28026#respond" data-commentid="28026" data-postid="372" data-belowelement="div-comment-28026" data-respondelement="respond" aria-label="Reply to admin">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+</ol><!-- .children -->
+</li><!-- #comment-## -->
+		<li id="comment-28839" class="pingback even thread-odd thread-alt depth-1">
+			<div class="comment-body">
+				Pingback: <a href="http://tech.mattmillman.com/making-use-of-recycled-xilinx-xc9500-cplds/" rel="external nofollow ugc" class="url">Making use of recycled Xilinx XC9500 CPLDs | Matt's Tech Pages</a> 			</div>
+		</li><!-- #comment-## -->
+		<li id="comment-33974" class="comment odd alt thread-even depth-1">
+			<article id="div-comment-33974" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt="" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/8d2973f2c2a4f751ae0c5022da818f55.png" srcset="http://2.gravatar.com/avatar/8d2973f2c2a4f751ae0c5022da818f55?s=68&amp;d=mm&amp;r=g 2x" class="avatar avatar-34 photo" height="34" width="34">						<b class="fn">OldSchool</b> <span class="says">says:</span>					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+						<a href="http://tech.mattmillman.com/projects/8od/#comment-33974">
+							<time datetime="2018-04-28T07:26:10+00:00">
+								April 28, 2018 at 7:26 am							</time>
+						</a>
+											</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content">
+					<p>They (16-bit x86) are still in production.  In the form of various 186 processors. Just see <a href="http://www.innovasic.com/upload/products/Innovasic_IA186ER_IA188ER_Data_Sheet_1.pdf" rel="nofollow ugc">http://www.innovasic.com/upload/products/Innovasic_IA186ER_IA188ER_Data_Sheet_1.pdf</a></p>
+				</div><!-- .comment-content -->
+
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="http://tech.mattmillman.com/projects/8od/?replytocom=33974#respond" data-commentid="33974" data-postid="372" data-belowelement="div-comment-33974" data-respondelement="respond" aria-label="Reply to OldSchool">Reply</a></div>			</article><!-- .comment-body -->
+		</li><!-- #comment-## -->
+	</ol><!-- .comment-list -->
+
+		
+		
+	
+		<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="http://tech.mattmillman.com/projects/8od/#respond" style="display:none;">Cancel reply</a></small></h3><form action="http://tech.mattmillman.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate=""><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span> Required fields are marked <span class="required">*</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name <span class="required">*</span></label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" required="required"></p>
+<p class="comment-form-email"><label for="email">Email <span class="required">*</span></label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" required="required"></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200"></p>
+<p class="comment-form-cookies-consent"><input id="wp-comment-cookies-consent" name="wp-comment-cookies-consent" type="checkbox" value="yes"> <label for="wp-comment-cookies-consent">Save my name, email, and website in this browser for the next time I comment.</label></p>
+<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment"> <input type="hidden" name="comment_post_ID" value="372" id="comment_post_ID">
+<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="44f033786c"></p><p style="display: none;"></p><input type="hidden" id="ak_js" name="ak_js" value="1604208934716"></form>	</div><!-- #respond -->
+	
+</div><!-- #comments -->
+
+		</div><!-- #content -->
+	</div><!-- #primary -->
+	</div><!-- #main-content -->
+
+<div id="secondary">
+	
+	
+		<div id="primary-sidebar" class="primary-sidebar widget-area" role="complementary">
+				<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Recent Posts</h1>		<ul>
+											<li>
+					<a href="http://tech.mattmillman.com/mcs-48-the-quest-for-16-bit-division-on-the-8-bit-cpu-which-cant-divide-anything/">MCS-48: The quest for 16-bit division on the 8-bit CPU which can’t divide anything</a>
+									</li>
+											<li>
+					<a href="http://tech.mattmillman.com/a-load-of-doubtful-marketing-bollocks-lands-on-my-crimp-tool-page/">MDPC CTX3: A load of doubtful marketing bollocks lands on my crimp connectors page</a>
+									</li>
+											<li>
+					<a href="http://tech.mattmillman.com/an-easy-to-build-mcs-48-programmer-and-something-to-use-it-for/">An easy to build MCS-48 programmer, and something to use it for</a>
+									</li>
+											<li>
+					<a href="http://tech.mattmillman.com/iwiss-sn-025-another-head-scratching-dupont-crimp-tool-lands/">IWISS SN-025: Another head scratching “DuPont” crimp tool lands</a>
+									</li>
+											<li>
+					<a href="http://tech.mattmillman.com/a-new-budget-dupont-crimp-tool-is-bought-to-my-attention/">A new budget “DuPont” crimp tool is bought to my attention</a>
+									</li>
+					</ul>
+		</aside><aside id="recent-comments-2" class="widget widget_recent_comments"><h1 class="widget-title">Recent Comments</h1><ul id="recentcomments"><li class="recentcomments"><span class="comment-author-link">obelisk of gaul</span> on <a href="http://tech.mattmillman.com/mcs-48-the-quest-for-16-bit-division-on-the-8-bit-cpu-which-cant-divide-anything/#comment-89947">MCS-48: The quest for 16-bit division on the 8-bit CPU which can’t divide anything</a></li><li class="recentcomments"><span class="comment-author-link">admin</span> on <a href="http://tech.mattmillman.com/mcs-48-the-quest-for-16-bit-division-on-the-8-bit-cpu-which-cant-divide-anything/#comment-89946">MCS-48: The quest for 16-bit division on the 8-bit CPU which can’t divide anything</a></li><li class="recentcomments"><span class="comment-author-link"><a href="http://www.bpaddock.com/" rel="external nofollow ugc" class="url">Bob Paddock</a></span> on <a href="http://tech.mattmillman.com/mcs-48-the-quest-for-16-bit-division-on-the-8-bit-cpu-which-cant-divide-anything/#comment-89944">MCS-48: The quest for 16-bit division on the 8-bit CPU which can’t divide anything</a></li><li class="recentcomments"><span class="comment-author-link">admin</span> on <a href="http://tech.mattmillman.com/projects/building-your-own-pulse-to-tone-converter/#comment-89942">Building your own pulse to tone (DTMF) converter</a></li><li class="recentcomments"><span class="comment-author-link">João Santos</span> on <a href="http://tech.mattmillman.com/projects/building-your-own-pulse-to-tone-converter/#comment-89941">Building your own pulse to tone (DTMF) converter</a></li></ul></aside><aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Archives</h1>		<ul>
+				<li><a href="http://tech.mattmillman.com/2020/10/">October 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/09/">September 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/08/">August 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/07/">July 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/06/">June 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/05/">May 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/04/">April 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/03/">March 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/02/">February 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2020/01/">January 2020</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/12/">December 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/07/">July 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/06/">June 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/05/">May 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/02/">February 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2019/01/">January 2019</a></li>
+	<li><a href="http://tech.mattmillman.com/2018/06/">June 2018</a></li>
+	<li><a href="http://tech.mattmillman.com/2018/05/">May 2018</a></li>
+	<li><a href="http://tech.mattmillman.com/2018/04/">April 2018</a></li>
+	<li><a href="http://tech.mattmillman.com/2017/09/">September 2017</a></li>
+	<li><a href="http://tech.mattmillman.com/2017/08/">August 2017</a></li>
+	<li><a href="http://tech.mattmillman.com/2017/06/">June 2017</a></li>
+	<li><a href="http://tech.mattmillman.com/2017/05/">May 2017</a></li>
+	<li><a href="http://tech.mattmillman.com/2017/01/">January 2017</a></li>
+	<li><a href="http://tech.mattmillman.com/2016/08/">August 2016</a></li>
+	<li><a href="http://tech.mattmillman.com/2016/05/">May 2016</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/11/">November 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/10/">October 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/09/">September 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/06/">June 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/04/">April 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/03/">March 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2015/02/">February 2015</a></li>
+	<li><a href="http://tech.mattmillman.com/2014/11/">November 2014</a></li>
+	<li><a href="http://tech.mattmillman.com/2014/06/">June 2014</a></li>
+	<li><a href="http://tech.mattmillman.com/2014/05/">May 2014</a></li>
+	<li><a href="http://tech.mattmillman.com/2014/04/">April 2014</a></li>
+		</ul>
+			</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Categories</h1>		<ul>
+				<li class="cat-item cat-item-4"><a href="http://tech.mattmillman.com/category/bits-and-pieces/">Bits and pieces</a>
+</li>
+	<li class="cat-item cat-item-10"><a href="http://tech.mattmillman.com/category/crimp-tools-and-connectors/">Crimp tools and connectors</a>
+</li>
+	<li class="cat-item cat-item-3"><a href="http://tech.mattmillman.com/category/lcd/">LCD</a>
+</li>
+	<li class="cat-item cat-item-6"><a href="http://tech.mattmillman.com/category/retro-pc/">Retro PC</a>
+</li>
+	<li class="cat-item cat-item-1"><a href="http://tech.mattmillman.com/category/uncategorized/">Uncategorized</a>
+</li>
+	<li class="cat-item cat-item-8"><a href="http://tech.mattmillman.com/category/vintage-microcontrollers/">Vintage Microcontrollers</a>
+</li>
+		</ul>
+			</aside>	</div><!-- #primary-sidebar -->
+	</div><!-- #secondary -->
+
+		</div><!-- #main -->
+
+		<footer id="colophon" class="site-footer" role="contentinfo">
+
+			
+			<div class="site-info">
+												<a href="https://wordpress.org/" class="imprint">
+					Proudly powered by WordPress				</a>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div><!-- #page -->
+
+	<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/comment-reply.min.js.download"></script>
+<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/functions.js.download"></script>
+<script src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/wp-embed.min.js.download"></script>
+<script async="async" src="./8OD – Arduino form factor Intel 8086 _ Matt&#39;s Tech Pages_files/form.js.download"></script>
+
+
+<div id="uvpn_rate_us" style="display: none;">            <div class="uvpn_wrap">                <div class="uvpn_logo-ext">                    <div class="uvpn_logo-wrap">                        <img src="chrome-extension://jaoafpkngncfpfggjefnekilbkcpjdgp/img/128.png">                    </div>                </div>                <div class="uvpn_title">                    Don’t Forget to Rate Us                </div>                <div class="uvpn_desc">                    If you enjoy our product, give us 5 stars. It helps so much!                </div>                <div class="stars">                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                    <svg xmlns="http://www.w3.org/2000/svg" width="1235" height="1175" viewBox="0 0 1235 1175">                        <path fill="#cf6218" d="M0,449h1235l-999,726 382-1175 382,1175z"></path>                    </svg>                </div>                <a target="_blank" href="https://chrome.google.com/webstore/detail/uvpn-free-and-unlimited-v/jaoafpkngncfpfggjefnekilbkcpjdgp/reviews" id="rate_btn_rateus" class="uvpn_rate-btn uvpn_btn">                    Rate Us                </a>                <div id="close_btn_rateus" class="uvpn_later-btn uvpn_btn">                    Not Now                </div>            </div>        </div></body></html>
